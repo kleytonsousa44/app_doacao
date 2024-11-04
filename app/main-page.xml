@@ -1,0 +1,23 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
+    <ActionBar title="Doação PIX" class="bg-blue-500 text-white" />
+
+    <StackLayout class="p-6 space-y-4">
+        <Label text="Se tiver 2 reais mande nesse PIX abaixo e ajude um pobre!" 
+               class="text-lg text-center font-bold" textWrap="true" />
+        
+        <GridLayout rows="auto" columns="*, auto" class="bg-gray-100 p-4 rounded-lg">
+            <Label text="pes4850@gmail.com" 
+                   class="text-base text-gray-700" 
+                   col="0" />
+            <Button text="Copiar" 
+                    tap="{{ onCopyPix }}" 
+                    class="bg-blue-500 text-white px-4 py-2 rounded-lg"
+                    col="1" />
+        </GridLayout>
+
+        <Label text="{{ copyMessage }}" 
+               class="text-sm text-green-600 text-center" 
+               textWrap="true" 
+               visibility="{{ showCopyMessage ? 'visible' : 'collapsed' }}" />
+    </StackLayout>
+</Page>
